@@ -1,0 +1,13 @@
+This is a very basic node js application getting containerized using Docker.
+
+Dockerfile contains the BASE IMAGE: node:14-alpine
+The working directory inside the the container is /usr/app
+There are some npm installation to run the application.
+
+COMMANDS:
+TO LIST DOWN ALL THE IMAGES: docker images
+TO LIST DOWN THE CONTAINERS: docker ps
+TO BUILD AN IMAGE FROM THE DOCKER FILE: docker build -t <Tag_name>:version <directory of DF> #Ex: docker build -t nodejsappimage .
+TO CREATE A CONTAINER OUT OF THE IMAGE: docker run -p <port_to_route_incoming_requests_on_local_host>:<port_inside_container> <image_id>
+TO GET INTO THE CONTAINER: docker exec -it <container_id> sh
+
