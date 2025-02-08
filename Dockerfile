@@ -1,6 +1,8 @@
 FROM node:14-alpine
 
-COPY ./ ./ 
+WORKDIR /usr/app
+
+COPY ./ ./
 
 #install dependencies
 RUN npm install
